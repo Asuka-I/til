@@ -1,4 +1,4 @@
-## Fakerを使った降順
+## pagenationを使った降順
 ```ruby:posts_controller.rb
 @posts = Post.all.order(created_at: :desc).page(params[:page]).per(PER_PAGE)
 ```
