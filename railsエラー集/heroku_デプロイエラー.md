@@ -73,3 +73,21 @@ gmail:
   address: アプリ用に作成したメールアドレス
   password: 16桁のアプリパスワード
 ```
+
+変更後、再度pushを試みるが、エラーが出る。
+
+今度は以下を実行
+```
+ RAILS_ENV=production bin/rails assets:precompile
+```
+エラーは特に発生せず、、、
+
+## 解決方法
+
+ファイルを修正した後、
+```
+git add .
+git commit -m "comment"
+```
+
+を実行し、再度pushしてエラー解消！
