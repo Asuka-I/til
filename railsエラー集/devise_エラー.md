@@ -8,6 +8,18 @@ PG::DuplicateColumn: ERROR:  column "email" of relation "users" already exists
 
 エラー文を見ると、どうやらusersテーブルが重複しているようだ。
 
+## 試した事
+`rails db:migrate:reset`
+```
+rails aborted!
+ActiveRecord::NoEnvironmentInSchemaError: 
+
+Environment data not found in the schema. To resolve this issue, run: 
+
+        bin/rails db:environment:set RAILS_ENV=development
+```
+binは一切弄っていないので他に原因がありそう
+
 ## 解決方法
 - 対象モデルを削除する
 
